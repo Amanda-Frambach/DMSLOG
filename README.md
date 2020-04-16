@@ -45,11 +45,11 @@ Desta forma conseguiremos criar condições para que o sistema dê a opção e a
 
 op = 1
 while op != 5:
-  op = int(input('1-Cadastrar Cliente \n 2-Consultar Todos os Clientes \n 3-Visualizar Custos \n 4-Consultar Lucro \n 5-Sair do Programa \n Digite uma opção:  '))
+        op = int(input('1-Cadastrar Cliente \n 2-Consultar Todos os Clientes \n 3-Visualizar Custos \n 4-Consultar Lucro \n 5-Sair do Programa \n Digite uma opção:  '))
 
 A tabela deverar ser feita desta forma, com a atribuição de cada variavel para que não aconteça erro na leitura do programa:
 
- cliente = str(input('Cliente: '))
+        cliente = str(input('Cliente: '))
         contato = int(input('Contato: '))
         custo = float(input('Custo: '))
         preco = float (input('Preço: '))
@@ -57,7 +57,7 @@ A tabela deverar ser feita desta forma, com a atribuição de cada variavel para
         data_chegada = input('Data chegada [d/m/Y]: ')
 
 Inserindo os valores de com o comando INSERT_TO da seguinte forma:
-cursor.execute("""
+        cursor.execute("""
         INSERT INTO Cadastro (Cliente, Contato, Custo, Preco, envio, chegada)
         VALUES (?,?,?,?,?,?)
         """, (cliente, contato, custo, preco, data_envio, data_chegada))
